@@ -23,6 +23,7 @@ from openjiuwen_deepsearch.framework.openjiuwen.tools.search_api import (
     BochaSearchAPIWrapper,
     JinaSearchAPIWrapper,
     PerplexitySearchAPIWrapper,
+    YoucomSearchAPIWrapper,
     load_external_search_tools
 )
 from openjiuwen_deepsearch.framework.openjiuwen.tools.search_api.scholarly_search.common import (
@@ -55,6 +56,7 @@ search_engine_mapping = {
     SearchEngine.JINA.value: JinaSearchAPIWrapper,
     SearchEngine.PERPLEXITY.value: PerplexitySearchAPIWrapper,
     SearchEngine.SERPER.value: GoogleSearchAPIWrapper,
+    SearchEngine.YOUCOM.value: YoucomSearchAPIWrapper,
 }
 
 

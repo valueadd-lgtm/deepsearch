@@ -16,6 +16,7 @@ class SearchEngine(enum.Enum):
     PERPLEXITY = "perplexity"
     SERPER = "serper"
     AGC_AINETWORKING = "agc_ainetworking"
+    YOUCOM = "youcom"
 
 
 class LocalSearch(enum.Enum):

@@ -13,6 +13,7 @@ __all__ = [
     "BochaSearchAPIWrapper",
     "JinaSearchAPIWrapper",
     "PerplexitySearchAPIWrapper",
+    "YoucomSearchAPIWrapper",
     "LocalDatasetAPIWrapper",
     "NativeLocalSearchAPIWrapper",
     "load_external_search_tools",
@@ -40,3 +41,4 @@ from openjiuwen_deepsearch.framework.openjiuwen.tools.search_api.scholarly_searc
 )
 from openjiuwen_deepsearch.framework.openjiuwen.tools.search_api.tavily.api_wrapper import TavilySearchAPIWrapper
 from openjiuwen_deepsearch.framework.openjiuwen.tools.search_api.xunfei.api_wrapper import XunfeiSearchAPIWrapper
+from openjiuwen_deepsearch.framework.openjiuwen.tools.search_api.youcom.api_wrapper import YoucomSearchAPIWrapper
