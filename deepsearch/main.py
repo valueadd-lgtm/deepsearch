@@ -45,6 +45,7 @@ RESEARCH_ENGINES_ALLOWING_EMPTY_SEARCH_URL = {
     "perplexity",
     "serper",
     "agc_ainetworking",
+    "youcom",
 }
 
 

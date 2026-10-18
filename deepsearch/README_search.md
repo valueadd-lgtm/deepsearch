@@ -198,7 +198,7 @@ Per-question (one search episode) limits.
 
 1. **`search_fetch`** — uses **`WebSearch`** and **`WebFetch`**.  
    - Good for: live web, fresh pages, open-domain QA.  
-   - Requires: **`web_search_engine_config`** for the selected search engine and **`web_fetch_provider_config`** for the selected fetch provider. The current fetch provider is `jina`; supported search engines include Tavily, Google, Jina, Serper, Bocha, Perplexity, Petal, Xunfei, and custom engines.
+   - Requires: **`web_search_engine_config`** for the selected search engine and **`web_fetch_provider_config`** for the selected fetch provider. The current fetch provider is `jina`; supported search engines include Tavily, Google, Jina, Serper, Bocha, Perplexity, Petal, Xunfei, You.com (`youcom`), and custom engines.
 
 2. **`retrieve`** — uses **`Retrieve`** (vector store).  
    - Good for: KB QA, closed corpora, precise chunk retrieval.  
@@ -440,6 +440,22 @@ python -m main \
   --llm_api_key "your-llm-key" \
   --web_search_engine_name serper \
   --web_search_api_key "your-serper-key" \
+  --fetch_provider_name jina \
+  --fetch_api_key "your-jina-key"
+```
+
+To use [You.com](https://you.com) as the web search engine, set `--web_search_engine_name youcom` and pass your You.com API key (the `YDC_API_KEY` value). You.com has a public default endpoint, so `--web_search_url` is optional:
+
+```bash
+uv run python main.py --mode query --search_mode search \
+  --tool_map search_fetch \
+  --query "Your question here" \
+  --llm_model_name "your-model" \
+  --llm_model_type openai \
+  --llm_base_url "https://api.example.com/v1" \
+  --llm_api_key "your-llm-key" \
+  --web_search_engine_name youcom \
+  --web_search_api_key "your-ydc-api-key" \
   --fetch_provider_name jina \
   --fetch_api_key "your-jina-key"
 ```
